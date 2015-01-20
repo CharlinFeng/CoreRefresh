@@ -1,6 +1,13 @@
 # CoreRefresh
 注：本框架由iOS开发攻城狮Charlin制作，基于MJRefresh
-#### Charlin：四川成都华西都市报旗下华西都市网络技术部iOS工程师！
+#### Charlin：四川成都华西都市报旗下华西都市网络有限公司技术部iOS工程师！
+#先看看效果图吧
+![image](./asset/1.png)
+![image](./asset/2.png)
+![image](./asset/3.png)
+![image](./asset/4.png)
+![image](./asset/5.png)
+![image](./asset/6.png)
 
 #特点：
 ##1.完全重写了头部刷新控件，头部刷新控件个性化，你再也不用因为看到其他应用使用的是和你一样的顶部刷新控件而尴尬
