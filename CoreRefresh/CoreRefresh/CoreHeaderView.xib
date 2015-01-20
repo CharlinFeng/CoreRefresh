@@ -48,10 +48,22 @@
             <constraints>
                 <constraint firstItem="gb3-2e-cUQ" firstAttribute="leading" secondItem="qQe-pk-zH2" secondAttribute="leading" constant="100" id="4e2-Yq-MuS"/>
                 <constraint firstItem="59d-gQ-DlJ" firstAttribute="leading" secondItem="gb3-2e-cUQ" secondAttribute="trailing" constant="15" id="VXR-JE-ieN"/>
+                <constraint firstItem="59d-gQ-DlJ" firstAttribute="leading" secondItem="gb3-2e-cUQ" secondAttribute="trailing" constant="15" id="WhS-be-IPb"/>
                 <constraint firstAttribute="centerY" secondItem="gb3-2e-cUQ" secondAttribute="centerY" id="Z74-Fl-q30"/>
+                <constraint firstItem="59d-gQ-DlJ" firstAttribute="leading" secondItem="gb3-2e-cUQ" secondAttribute="trailing" constant="20" id="cCO-fd-i1l"/>
                 <constraint firstAttribute="centerY" secondItem="59d-gQ-DlJ" secondAttribute="centerY" id="rs7-gv-T5j"/>
+                <constraint firstAttribute="centerX" secondItem="59d-gQ-DlJ" secondAttribute="centerX" constant="-20" id="ryf-0T-JsE"/>
+                <constraint firstAttribute="centerX" secondItem="gb3-2e-cUQ" secondAttribute="centerX" constant="50" id="uKe-hc-0dC"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="4e2-Yq-MuS"/>
+                    <exclude reference="VXR-JE-ieN"/>
+                    <exclude reference="cCO-fd-i1l"/>
+                    <exclude reference="ryf-0T-JsE"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="iconImageV" destination="WZO-Mq-25n" id="NwK-GB-or6"/>
                 <outlet property="iconImageVMarginConstraint" destination="1gZ-JN-k7Z" id="Dhh-Uy-e83"/>
@@ -59,7 +71,7 @@
                 <outlet property="showVWConstraint" destination="4Xh-go-4H2" id="roL-JV-okB"/>
                 <outlet property="showView" destination="sfa-sy-rIr" id="NzY-Cx-qCY"/>
             </connections>
-            <point key="canvasLocation" x="467" y="390"/>
+            <point key="canvasLocation" x="160" y="386"/>
         </view>
     </objects>
     <resources>

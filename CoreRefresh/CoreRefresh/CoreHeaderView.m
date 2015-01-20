@@ -74,15 +74,7 @@ CGFloat const deltaValue=40.0f;
     
     [super didMoveToSuperview];
     
-    if(self.superview){
-        //设置状态
-        self.state=CoreHeaderViewRefreshStateNorMal;
-        CGFloat h=CoreRefreshHeaderViewH;
-        CGFloat y=-h;
-        CGFloat w=self.scrollView.mj_width;
-        CGRect frame=CGRectMake(0,y,w,h);
-        self.frame=frame;
-    }
+    [self adjustFrameWithContentSize];
 }
 
 
@@ -104,8 +96,24 @@ CGFloat const deltaValue=40.0f;
         
         // 调整状态
         [self adjustStateWithContentOffset];
+    }else if([CoreRefreshContentSize isEqualToString:keyPath]){
+        [self adjustFrameWithContentSize];
     }
 }
+
+
+-(void)adjustFrameWithContentSize{
+    if(self.superview){
+        //设置状态
+        self.state=CoreHeaderViewRefreshStateNorMal;
+        CGFloat h=CoreRefreshHeaderViewH;
+        CGFloat y=-h;
+        CGFloat w=self.scrollView.mj_width;
+        CGRect frame=CGRectMake(0,y,w,h);
+        self.frame=frame;
+    }
+}
+
 
 
 /**
