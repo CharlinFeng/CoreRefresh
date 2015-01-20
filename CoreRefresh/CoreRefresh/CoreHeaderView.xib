@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view userInteractionEnabled="NO" contentMode="scaleToFill" id="qQe-pk-zH2" customClass="CoreHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gb3-2e-cUQ" userLabel="showViewContentV">
+                    <rect key="frame" x="100" y="25" width="20" height="20"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfa-sy-rIr" userLabel="showView" customClass="CoreHeaderShowView">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <imageView userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CoreRefreshResource.bundle/coreRefreshIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="WZO-Mq-25n" userLabel="iconImageV">
+                            <rect key="frame" x="2" y="2" width="16" height="16"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="WZO-Mq-25n" secondAttribute="bottom" constant="2" id="1gZ-JN-k7Z"/>
+                        <constraint firstAttribute="trailing" secondItem="sfa-sy-rIr" secondAttribute="trailing" id="234-cw-TH2"/>
+                        <constraint firstAttribute="width" constant="20" id="4Xh-go-4H2"/>
+                        <constraint firstItem="WZO-Mq-25n" firstAttribute="leading" secondItem="gb3-2e-cUQ" secondAttribute="leading" constant="2" id="6bm-w3-FMH"/>
+                        <constraint firstAttribute="bottom" secondItem="sfa-sy-rIr" secondAttribute="bottom" id="HKH-C2-91w"/>
+                        <constraint firstItem="sfa-sy-rIr" firstAttribute="leading" secondItem="gb3-2e-cUQ" secondAttribute="leading" id="Lcc-Bh-BZI"/>
+                        <constraint firstAttribute="height" constant="20" id="XtA-V7-xHV"/>
+                        <constraint firstItem="WZO-Mq-25n" firstAttribute="top" secondItem="gb3-2e-cUQ" secondAttribute="top" constant="2" id="e8E-aH-CbS"/>
+                        <constraint firstItem="sfa-sy-rIr" firstAttribute="top" secondItem="gb3-2e-cUQ" secondAttribute="top" id="lQN-yx-85V"/>
+                        <constraint firstAttribute="trailing" secondItem="WZO-Mq-25n" secondAttribute="trailing" constant="2" id="pGP-Fw-5Wd"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="继续向下拉" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59d-gQ-DlJ" userLabel="messageLabel">
+                    <rect key="frame" x="135" y="25" width="80" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="gb3-2e-cUQ" firstAttribute="leading" secondItem="qQe-pk-zH2" secondAttribute="leading" constant="100" id="4e2-Yq-MuS"/>
+                <constraint firstItem="59d-gQ-DlJ" firstAttribute="leading" secondItem="gb3-2e-cUQ" secondAttribute="trailing" constant="15" id="VXR-JE-ieN"/>
+                <constraint firstAttribute="centerY" secondItem="gb3-2e-cUQ" secondAttribute="centerY" id="Z74-Fl-q30"/>
+                <constraint firstAttribute="centerY" secondItem="59d-gQ-DlJ" secondAttribute="centerY" id="rs7-gv-T5j"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconImageV" destination="WZO-Mq-25n" id="NwK-GB-or6"/>
+                <outlet property="iconImageVMarginConstraint" destination="1gZ-JN-k7Z" id="Dhh-Uy-e83"/>
+                <outlet property="messageLabel" destination="59d-gQ-DlJ" id="bXc-xO-76Y"/>
+                <outlet property="showVWConstraint" destination="4Xh-go-4H2" id="roL-JV-okB"/>
+                <outlet property="showView" destination="sfa-sy-rIr" id="NzY-Cx-qCY"/>
+            </connections>
+            <point key="canvasLocation" x="467" y="390"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CoreRefreshResource.bundle/coreRefreshIcon.png" width="109" height="53"/>
+    </resources>
+</document>

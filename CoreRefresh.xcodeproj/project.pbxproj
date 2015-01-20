@@ -14,13 +14,25 @@
 		D605AC5A1A6B4F4D001825CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D605AC591A6B4F4D001825CE /* main.m */; };
 		D605AC5E1A6B4F4D001825CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D605AC5D1A6B4F4D001825CE /* AppDelegate.m */; };
 		D605AC611A6B4F4D001825CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D605AC5F1A6B4F4D001825CE /* Main.storyboard */; };
-		D605AC641A6B4F4D001825CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D605AC631A6B4F4D001825CE /* ViewController.m */; };
 		D605AC661A6B4F4D001825CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D605AC651A6B4F4D001825CE /* Images.xcassets */; };
 		D605AC6D1A6B4F4D001825CE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D605AC6C1A6B4F4D001825CE /* XCTest.framework */; };
 		D605AC6E1A6B4F4D001825CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D605AC4D1A6B4F4C001825CE /* Foundation.framework */; };
 		D605AC6F1A6B4F4D001825CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D605AC511A6B4F4D001825CE /* UIKit.framework */; };
 		D605AC771A6B4F4D001825CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D605AC751A6B4F4D001825CE /* InfoPlist.strings */; };
 		D605AC791A6B4F4D001825CE /* CoreRefreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D605AC781A6B4F4D001825CE /* CoreRefreshTests.m */; };
+		D605AC841A6B4F74001825CE /* NewsListTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D605AC831A6B4F74001825CE /* NewsListTVC.m */; };
+		D605AC881A6B50DD001825CE /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = D605AC871A6B50DD001825CE /* UIScrollView+Refresh.m */; };
+		D605AC8B1A6B52A8001825CE /* CoreFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D605AC8A1A6B52A8001825CE /* CoreFooterView.m */; };
+		D605AC8E1A6B537A001825CE /* CoreRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = D605AC8D1A6B537A001825CE /* CoreRefreshView.m */; };
+		D605AC911A6B54E5001825CE /* CoreRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D605AC901A6B54E5001825CE /* CoreRefreshConst.m */; };
+		D605AC961A6B55D1001825CE /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D605AC931A6B55D1001825CE /* UIScrollView+MJExtension.m */; };
+		D605AC971A6B55D1001825CE /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D605AC951A6B55D1001825CE /* UIView+MJExtension.m */; };
+		D605AC991A6B5969001825CE /* CoreFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D605AC981A6B5969001825CE /* CoreFooterView.xib */; };
+		EE5DBB981A6E003100BC14D9 /* CoreHeaderShowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5DBB971A6E003100BC14D9 /* CoreHeaderShowView.xib */; };
+		EE9B1D471A6C99300094CFD2 /* CoreHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9B1D461A6C99300094CFD2 /* CoreHeaderView.m */; };
+		EE9B1D491A6C9AFE0094CFD2 /* CoreHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9B1D481A6C9AFE0094CFD2 /* CoreHeaderView.xib */; };
+		EE9B1D4B1A6C9C3A0094CFD2 /* CoreRefreshResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EE9B1D4A1A6C9C3A0094CFD2 /* CoreRefreshResource.bundle */; };
+		EE9B1D4E1A6CE67C0094CFD2 /* CoreHeaderShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9B1D4D1A6CE67C0094CFD2 /* CoreHeaderShowView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +57,35 @@
 		D605AC5C1A6B4F4D001825CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D605AC5D1A6B4F4D001825CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D605AC601A6B4F4D001825CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D605AC621A6B4F4D001825CE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D605AC631A6B4F4D001825CE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D605AC651A6B4F4D001825CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D605AC6B1A6B4F4D001825CE /* CoreRefreshTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreRefreshTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D605AC6C1A6B4F4D001825CE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D605AC741A6B4F4D001825CE /* CoreRefreshTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreRefreshTests-Info.plist"; sourceTree = "<group>"; };
 		D605AC761A6B4F4D001825CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D605AC781A6B4F4D001825CE /* CoreRefreshTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreRefreshTests.m; sourceTree = "<group>"; };
+		D605AC821A6B4F74001825CE /* NewsListTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListTVC.h; sourceTree = "<group>"; };
+		D605AC831A6B4F74001825CE /* NewsListTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListTVC.m; sourceTree = "<group>"; };
+		D605AC861A6B50DD001825CE /* UIScrollView+Refresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refresh.h"; sourceTree = "<group>"; };
+		D605AC871A6B50DD001825CE /* UIScrollView+Refresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Refresh.m"; sourceTree = "<group>"; };
+		D605AC891A6B52A8001825CE /* CoreFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreFooterView.h; sourceTree = "<group>"; };
+		D605AC8A1A6B52A8001825CE /* CoreFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreFooterView.m; sourceTree = "<group>"; };
+		D605AC8C1A6B537A001825CE /* CoreRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreRefreshView.h; sourceTree = "<group>"; };
+		D605AC8D1A6B537A001825CE /* CoreRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreRefreshView.m; sourceTree = "<group>"; };
+		D605AC8F1A6B54E5001825CE /* CoreRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreRefreshConst.h; sourceTree = "<group>"; };
+		D605AC901A6B54E5001825CE /* CoreRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreRefreshConst.m; sourceTree = "<group>"; };
+		D605AC921A6B55D1001825CE /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
+		D605AC931A6B55D1001825CE /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
+		D605AC941A6B55D1001825CE /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
+		D605AC951A6B55D1001825CE /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		D605AC981A6B5969001825CE /* CoreFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoreFooterView.xib; sourceTree = "<group>"; };
+		D605AC9A1A6B5AE9001825CE /* CoreRefreshEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreRefreshEntry.h; sourceTree = "<group>"; };
+		EE5DBB971A6E003100BC14D9 /* CoreHeaderShowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoreHeaderShowView.xib; sourceTree = "<group>"; };
+		EE9B1D451A6C99300094CFD2 /* CoreHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreHeaderView.h; sourceTree = "<group>"; };
+		EE9B1D461A6C99300094CFD2 /* CoreHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreHeaderView.m; sourceTree = "<group>"; };
+		EE9B1D481A6C9AFE0094CFD2 /* CoreHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoreHeaderView.xib; sourceTree = "<group>"; };
+		EE9B1D4A1A6C9C3A0094CFD2 /* CoreRefreshResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CoreRefreshResource.bundle; sourceTree = "<group>"; };
+		EE9B1D4C1A6CE67C0094CFD2 /* CoreHeaderShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreHeaderShowView.h; sourceTree = "<group>"; };
+		EE9B1D4D1A6CE67C0094CFD2 /* CoreHeaderShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreHeaderShowView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +145,12 @@
 		D605AC531A6B4F4D001825CE /* CoreRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				D605AC851A6B50B6001825CE /* CoreRefresh */,
 				D605AC5C1A6B4F4D001825CE /* AppDelegate.h */,
 				D605AC5D1A6B4F4D001825CE /* AppDelegate.m */,
 				D605AC5F1A6B4F4D001825CE /* Main.storyboard */,
-				D605AC621A6B4F4D001825CE /* ViewController.h */,
-				D605AC631A6B4F4D001825CE /* ViewController.m */,
+				D605AC821A6B4F74001825CE /* NewsListTVC.h */,
+				D605AC831A6B4F74001825CE /* NewsListTVC.m */,
 				D605AC651A6B4F4D001825CE /* Images.xcassets */,
 				D605AC541A6B4F4D001825CE /* Supporting Files */,
 			);
@@ -150,6 +184,34 @@
 				D605AC751A6B4F4D001825CE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D605AC851A6B50B6001825CE /* CoreRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				D605AC921A6B55D1001825CE /* UIScrollView+MJExtension.h */,
+				D605AC931A6B55D1001825CE /* UIScrollView+MJExtension.m */,
+				D605AC941A6B55D1001825CE /* UIView+MJExtension.h */,
+				D605AC951A6B55D1001825CE /* UIView+MJExtension.m */,
+				D605AC861A6B50DD001825CE /* UIScrollView+Refresh.h */,
+				D605AC871A6B50DD001825CE /* UIScrollView+Refresh.m */,
+				D605AC8C1A6B537A001825CE /* CoreRefreshView.h */,
+				D605AC8D1A6B537A001825CE /* CoreRefreshView.m */,
+				EE9B1D451A6C99300094CFD2 /* CoreHeaderView.h */,
+				EE9B1D461A6C99300094CFD2 /* CoreHeaderView.m */,
+				EE9B1D481A6C9AFE0094CFD2 /* CoreHeaderView.xib */,
+				EE9B1D4C1A6CE67C0094CFD2 /* CoreHeaderShowView.h */,
+				EE9B1D4D1A6CE67C0094CFD2 /* CoreHeaderShowView.m */,
+				EE5DBB971A6E003100BC14D9 /* CoreHeaderShowView.xib */,
+				EE9B1D4A1A6C9C3A0094CFD2 /* CoreRefreshResource.bundle */,
+				D605AC891A6B52A8001825CE /* CoreFooterView.h */,
+				D605AC8A1A6B52A8001825CE /* CoreFooterView.m */,
+				D605AC981A6B5969001825CE /* CoreFooterView.xib */,
+				D605AC8F1A6B54E5001825CE /* CoreRefreshConst.h */,
+				D605AC901A6B54E5001825CE /* CoreRefreshConst.m */,
+				D605AC9A1A6B5AE9001825CE /* CoreRefreshEntry.h */,
+			);
+			path = CoreRefresh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +261,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "___FULLUSERNAME___";
 				TargetAttributes = {
+					D605AC491A6B4F4C001825CE = {
+						DevelopmentTeam = 8838KNYKS6;
+					};
 					D605AC6A1A6B4F4D001825CE = {
 						TestTargetID = D605AC491A6B4F4C001825CE;
 					};
@@ -230,6 +295,10 @@
 			files = (
 				D605AC661A6B4F4D001825CE /* Images.xcassets in Resources */,
 				D605AC581A6B4F4D001825CE /* InfoPlist.strings in Resources */,
+				EE9B1D4B1A6C9C3A0094CFD2 /* CoreRefreshResource.bundle in Resources */,
+				EE5DBB981A6E003100BC14D9 /* CoreHeaderShowView.xib in Resources */,
+				EE9B1D491A6C9AFE0094CFD2 /* CoreHeaderView.xib in Resources */,
+				D605AC991A6B5969001825CE /* CoreFooterView.xib in Resources */,
 				D605AC611A6B4F4D001825CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,9 +318,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D605AC641A6B4F4D001825CE /* ViewController.m in Sources */,
 				D605AC5E1A6B4F4D001825CE /* AppDelegate.m in Sources */,
+				D605AC911A6B54E5001825CE /* CoreRefreshConst.m in Sources */,
+				EE9B1D4E1A6CE67C0094CFD2 /* CoreHeaderShowView.m in Sources */,
+				D605AC8E1A6B537A001825CE /* CoreRefreshView.m in Sources */,
+				D605AC8B1A6B52A8001825CE /* CoreFooterView.m in Sources */,
+				D605AC971A6B55D1001825CE /* UIView+MJExtension.m in Sources */,
+				D605AC961A6B55D1001825CE /* UIScrollView+MJExtension.m in Sources */,
+				EE9B1D471A6C99300094CFD2 /* CoreHeaderView.m in Sources */,
 				D605AC5A1A6B4F4D001825CE /* main.m in Sources */,
+				D605AC841A6B4F74001825CE /* NewsListTVC.m in Sources */,
+				D605AC881A6B50DD001825CE /* UIScrollView+Refresh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,10 +453,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoreRefresh/CoreRefresh-Prefix.pch";
 				INFOPLIST_FILE = "CoreRefresh/CoreRefresh-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -389,10 +469,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoreRefresh/CoreRefresh-Prefix.pch";
 				INFOPLIST_FILE = "CoreRefresh/CoreRefresh-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -456,6 +539,7 @@
 				D605AC7E1A6B4F4D001825CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D605AC7F1A6B4F4D001825CE /* Build configuration list for PBXNativeTarget "CoreRefreshTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +548,7 @@
 				D605AC811A6B4F4D001825CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
