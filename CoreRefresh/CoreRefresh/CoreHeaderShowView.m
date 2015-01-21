@@ -23,7 +23,6 @@
 
 
 
-
 -(void)drawRect:(CGRect)rect{
     //获取上下文
     CGContextRef context=UIGraphicsGetCurrentContext();
@@ -33,7 +32,7 @@
     
     if(!self.refreshing) return;
     
-    [self drawGrayCircle:context rect:rect];
+    [self drawWhiteCircle:context rect:rect];
 }
 
 
@@ -42,6 +41,7 @@
     
     //新建路径
     CGMutablePathRef progressArcPath=CGPathCreateMutable();
+    
     CGFloat endAngle=kDegreeToRadian(_progress * 359.99f)+ kDegreeToRadian(-90);
 
     //添加一个环形路径
@@ -65,8 +65,8 @@
 
 
 
-#pragma mark  绘制一个灰色的圆环
--(void)drawGrayCircle:(CGContextRef)context rect:(CGRect)rect{
+#pragma mark  绘制一个白色的圆环
+-(void)drawWhiteCircle:(CGContextRef)context rect:(CGRect)rect{
     
     //新建路径
     CGMutablePathRef grayCirclePath=CGPathCreateMutable();
@@ -175,16 +175,13 @@
         anim.duration=.8f;
         
         //设置速度函数
-        anim.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        anim.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
         
         //完成动画不删除：
         anim.removedOnCompletion=NO;
         
         //向前填充
         anim.fillMode=kCAFillModeForwards;
-        
-        //设置动画曲线
-        anim.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
         
         //设置重复次数
         anim.repeatCount=MAXFLOAT;
