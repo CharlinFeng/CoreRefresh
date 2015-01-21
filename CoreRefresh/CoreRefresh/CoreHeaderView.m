@@ -108,7 +108,7 @@ CGFloat const deltaValue=40.0f;
         self.state=CoreHeaderViewRefreshStateNorMal;
         CGFloat h=CoreRefreshHeaderViewH;
         CGFloat y=-h;
-        CGFloat w=self.scrollView.mj_width;
+        CGFloat w=self.scrollView.mj_contentSizeWidth;
         CGRect frame=CGRectMake(0,y,w,h);
         self.frame=frame;
     }
