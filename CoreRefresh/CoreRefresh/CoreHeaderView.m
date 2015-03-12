@@ -11,9 +11,12 @@
 #import "UIView+MJExtension.h"
 #import "CoreRefreshConst.h"
 #import "CoreHeaderShowView.h"
+#import "CAAnimation+CoreRefresh.h"
 #import <objc/message.h>
 
 CGFloat const deltaValue=40.0f;
+
+
 
 @interface CoreHeaderView ()
 
@@ -30,6 +33,12 @@ CGFloat const deltaValue=40.0f;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *showVWConstraint;
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *iconImageVMarginConstraint;
+
+
+/**
+ *  主要修复ScrollView的contentSize重复调用的问题。
+ */
+@property (nonatomic,assign) CGSize scrollViewContentSize;
 
 @end
 
@@ -50,6 +59,8 @@ CGFloat const deltaValue=40.0f;
 -(void)awakeFromNib{
     
     [super awakeFromNib];
+    
+
     
     //子控件处理
     [self subViewHandle];
@@ -73,7 +84,7 @@ CGFloat const deltaValue=40.0f;
 -(void)didMoveToSuperview{
     
     [super didMoveToSuperview];
-    
+
     [self adjustFrameWithContentSize];
 }
 
@@ -97,7 +108,8 @@ CGFloat const deltaValue=40.0f;
         // 调整状态
         [self adjustStateWithContentOffset];
     }else if([CoreRefreshContentSize isEqualToString:keyPath]){
-        [self adjustFrameWithContentSize];
+        
+        self.scrollViewContentSize=self.scrollView.contentSize;
     }
 }
 
@@ -106,6 +118,7 @@ CGFloat const deltaValue=40.0f;
     if(self.superview){
         //设置状态
         self.state=CoreHeaderViewRefreshStateNorMal;
+
         CGFloat h=CoreRefreshHeaderViewH;
         CGFloat y=-h;
         CGFloat w=self.scrollView.mj_contentSizeWidth;
@@ -131,20 +144,23 @@ CGFloat const deltaValue=40.0f;
     CGFloat currentOffsetY = ABS(offsetY);
     // 头部控件刚好出现的offsetY
     CGFloat happenOffsetY = CoreRefreshHeaderViewH;
-    
+
     //进度条处理
     [self progressSetWithCurrentOffsetY:currentOffsetY happenOffsetY:happenOffsetY];
     
     if (self.scrollView.isDragging) {
         // 普通 和 即将刷新 的临界点
         if (self.state == CoreHeaderViewRefreshStateNorMal && currentOffsetY >= happenOffsetY) {
+            
             // 转为即将刷新状态
             self.state = CoreHeaderViewRefreshStateReleaseForRefreshing;
         } else if (self.state == CoreHeaderViewRefreshStateReleaseForRefreshing && currentOffsetY < happenOffsetY) {
+            
             // 转为普通状态
             self.state = CoreHeaderViewRefreshStateNorMal;
         }
     } else if (self.state == CoreHeaderViewRefreshStateReleaseForRefreshing) {// 即将刷新 && 手松开
+       
         // 开始刷新
         self.state = CoreHeaderViewRefreshStateRefreshing;
     }
@@ -182,8 +198,8 @@ CGFloat const deltaValue=40.0f;
 -(void)setState:(CoreHeaderViewRefreshState)state{
     
     // 1.一样的就直接返回
-    if (self.state == state) return;
-    
+    if (_state == state) return;
+
     CoreHeaderViewRefreshState oldState=_state;
     
     //记录
@@ -301,6 +317,8 @@ CGFloat const deltaValue=40.0f;
     
     [self updateInterFaceForStatusWithMessage:@"刷新成功"];
     
+    [self.iconImageV.layer addAnimation:[CAAnimation rotationAnim] forKey:@"rotationAnim"];
+
     //回调方法
     [self endRefreshing:NO];
 
@@ -309,7 +327,9 @@ CGFloat const deltaValue=40.0f;
 #pragma mark  不同的状态更新界面
 -(void)updateInterFaceForStatusWithMessage:(NSString *)message{
     
-    self.messageLabel.text=message;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.messageLabel.text=message;
+    });
 }
 
 
@@ -386,5 +406,17 @@ CGFloat const deltaValue=40.0f;
     
     [self removeFromSuperview];
 }
+
+
+-(void)setScrollViewContentSize:(CGSize)scrollViewContentSize{
+    
+    if(CGSizeEqualToSize(_scrollViewContentSize, scrollViewContentSize)) return;
+    
+    _scrollViewContentSize=scrollViewContentSize;
+    
+    //在这里再调整frame
+    [self adjustFrameWithContentSize];
+}
+
 
 @end

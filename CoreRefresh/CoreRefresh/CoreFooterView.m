@@ -54,7 +54,7 @@
     //颜色
     layer.borderColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:0.1f].CGColor;
     //圆角
-    layer.cornerRadius=10.0f;
+    layer.cornerRadius=5.0f;
     
 }
 

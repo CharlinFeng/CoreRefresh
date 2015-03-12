@@ -8,7 +8,12 @@
 
 #import "CoreHeaderShowView.h"
 #import "UIView+MJExtension.h"
+
 #define kDegreeToRadian(x) (M_PI/180.0 * (x))
+#define rgba(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+
+
+
 
 @interface CoreHeaderShowView ()
 
@@ -19,6 +24,43 @@
 @end
 
 @implementation CoreHeaderShowView
+
+
+-(instancetype)initWithFrame:(CGRect)frame{
+    
+    self = [super initWithFrame:frame];
+    
+    if(self){
+        
+        //添加边框
+        [self addBorder];
+    }
+    
+    return self;
+}
+
+
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    
+    self=[super initWithCoder:aDecoder];
+    
+    if(self){
+        
+        //添加边框
+        [self addBorder];
+    }
+    
+    return self;
+}
+
+
+/**
+ *  添加边框
+ */
+-(void)addBorder{
+    self.layer.borderColor=rgba(120, 120, 120, .1f).CGColor;
+    self.layer.borderWidth=1.0f;
+}
 
 
 
