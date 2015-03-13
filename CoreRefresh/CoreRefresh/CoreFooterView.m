@@ -54,7 +54,7 @@
     //颜色
     layer.borderColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:0.1f].CGColor;
     //圆角
-    layer.cornerRadius=5.0f;
+    layer.cornerRadius=10.0f;
     
 }
 
@@ -88,7 +88,7 @@
     
     //原本的bottom值
     CGFloat bottom=self.scrollViewOriginalInset.bottom;
-   
+    
     self.scrollView.mj_contentInsetBottom=bottom+CoreRefreshFooterViewH;
 }
 
@@ -113,6 +113,8 @@
 
 
 -(void)setState:(CoreFooterViewRefreshState)state{
+    
+    if(_state==state) return;
     
     //记录
     _state=state;
@@ -205,7 +207,7 @@
         // 调整frame
         [self adjustFrameWithContentSize];
     } else if ([CoreRefreshContentOffset isEqualToString:keyPath]) {
-
+        
         // 如果正在刷新，直接返回
         if (self.state == CoreFooterViewRefreshStateRefreshing) return;
         
@@ -222,7 +224,7 @@
 {
     //如果明确知道加载出错或已经没有更多数据，直接返回
     //此代码放在这里性能更好，避免无效计算
-    if(self.state==CoreFooterViewRefreshStateFailed || self.state==CoreFooterViewRefreshStateSuccessedResultNoMoreData) return;
+    if(self.state==CoreFooterViewRefreshStateSuccessedResultNoMoreData) return;
     
     // 当前的contentOffset
     CGFloat currentOffsetY = self.scrollView.mj_contentOffsetY;
@@ -230,8 +232,18 @@
     CGFloat happenOffsetY = [self happenOffsetY];
     
     // 如果是向下滚动到看不见尾部控件，设置状态并直接返回
-    if (currentOffsetY <= happenOffsetY) return;
-
+    if (currentOffsetY <= happenOffsetY){
+        if(self.state==CoreFooterViewRefreshStateFailed && currentOffsetY + CoreRefreshFooterViewH <= happenOffsetY){
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                self.state=CoreFooterViewRefreshStateNormalForContinueDragUp;
+            });
+        }
+        return;
+    }
+    
+    //给一个机会让上面失败的状态转为普通状态
+    if(self.state==CoreFooterViewRefreshStateFailed) return;
+    
     if(!self.scrollView.isDragging){//用户没有正在拖拽scrollView
         if(self.scrollView.isDecelerating){//必须要求在减速
             if(self.state!=CoreFooterViewRefreshStateRefreshing){//此时没有正在刷新
@@ -296,6 +308,7 @@
     }];
     [self removeFromSuperview];
 }
+
 
 
 

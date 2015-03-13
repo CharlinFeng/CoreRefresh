@@ -297,6 +297,9 @@ CGFloat const deltaValue=40.0f;
     
     [self updateInterFaceForStatusWithMessage:@"刷新失败"];
     
+    //添加动画
+    [self.iconImageV.layer addAnimation:[CAAnimation shakeAnim] forKey:@"shakeAnim"];
+    
     //回调方法
     [self endRefreshing:NO];
 
