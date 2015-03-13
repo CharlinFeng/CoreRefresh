@@ -18,4 +18,18 @@
 +(CABasicAnimation *)rotationAnim;
 
 
+
+/**
+ *  旋转动画
+ */
++(CABasicAnimation *)rotaAnim;
+
+
+
+/**
+ *  抖动
+ */
++(CAKeyframeAnimation *)shakeAnim;
+
+
 @end
