@@ -15,7 +15,6 @@
 @property (nonatomic,strong) NSArray *dataList;
 
 
-
 @end
 
 @implementation NewsListTVC
@@ -36,6 +35,7 @@
     [self.tableView reloadData];
     
      [self refreshWidgetPrepare];
+    
 }
 
 
@@ -47,14 +47,7 @@
     
     //添加顶部刷新控件
     [self.tableView addHeaderWithTarget:self action:@selector(headerRefresh)];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.tableView headerSetState:CoreHeaderViewRefreshStateRefreshing];
-    });
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.tableView headerSetState:CoreHeaderViewRefreshStateSuccessedResultDataShowing];
-    });
+
     
     //添加底部刷新
     [self.tableView addFooterWithTarget:self action:@selector(foorterRefresh)];
@@ -74,6 +67,7 @@
     
     if(!cell){
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:rid];
+        cell.backgroundColor=[UIColor clearColor];
     }
     //取出数据
     NSString *str=self.dataList[indexPath.row];
@@ -100,12 +94,12 @@
 
 #pragma mark  底部刷新
 -(void)foorterRefresh{
-    
+    NSLog(@"底部刷新");
     //保存旧数据
     NSMutableArray *oldArrayM=[NSMutableArray arrayWithArray:self.dataList];
     NSInteger count=oldArrayM.count;
     
-    if(count<100){
+    if(count!=100){
         for (NSInteger i=count; i<count+20; i++) {
             NSString *str=[NSString stringWithFormat:@"上拉刷新的新数据：%i",i];
             [oldArrayM addObject:str];

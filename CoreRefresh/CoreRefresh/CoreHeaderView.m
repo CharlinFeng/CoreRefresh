@@ -274,16 +274,18 @@ CGFloat const deltaValue=40.0f;
         
         // 2.设置滚动位置
         self.scrollView.mj_contentOffsetY = - top;
+    } completion:^(BOOL finished) {
+        //更新界面
+        [self updateInterFaceForStatusWithMessage:@"正在刷新中"];
+        
+        //通知showView开始刷新
+        self.showView.refreshing=YES;
+        
+        //回调方法
+        [self beginRefreshing];
     }];
 
-    //更新界面
-    [self updateInterFaceForStatusWithMessage:@"正在刷新中"];
-    
-    //通知showView开始刷新
-    self.showView.refreshing=YES;
-    
-    //回调方法
-    [self beginRefreshing];
+
 }
 
 

@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view userInteractionEnabled="NO" contentMode="scaleToFill" id="fPB-wo-ZCZ" customClass="CoreFooterView">
+        <view contentMode="scaleToFill" id="fPB-wo-ZCZ" customClass="CoreFooterView">
             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -15,21 +15,21 @@
                     <rect key="frame" x="10" y="10" width="300" height="40"/>
                     <subviews>
                         <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eLE-LE-Wtg" userLabel="aiView">
-                            <rect key="frame" x="85" y="10" width="20" height="20"/>
+                            <rect key="frame" x="130" y="10" width="20" height="20"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="20" id="xEc-kX-QH7"/>
                                 <constraint firstAttribute="height" constant="20" id="zuG-TN-IJk"/>
                             </constraints>
                         </activityIndicatorView>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数据加载中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaM-tY-KAW" userLabel="messageLabel">
-                            <rect key="frame" x="115" y="9" width="90" height="22"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaM-tY-KAW" userLabel="messageLabel">
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="centerY" secondItem="eLE-LE-Wtg" secondAttribute="centerY" id="7Fe-mV-H3x"/>
                         <constraint firstItem="vaM-tY-KAW" firstAttribute="leading" secondItem="eLE-LE-Wtg" secondAttribute="trailing" constant="10" id="OCU-8W-VSC"/>

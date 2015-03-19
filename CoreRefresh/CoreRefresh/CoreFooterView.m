@@ -41,6 +41,7 @@
     //添加阴影
     [self shadowAdd];
     
+    self.messageLabel.text=@"正在载入数据";
 }
 
 #pragma mark 添加阴影
@@ -50,12 +51,11 @@
     CALayer *layer=self.contentView.layer;
     
     //边框线宽
-    layer.borderWidth=0.5f;
+    layer.borderWidth=0.2f;
     //颜色
-    layer.borderColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:0.1f].CGColor;
+    layer.borderColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:0.5f].CGColor;
     //圆角
-    layer.cornerRadius=10.0f;
-    
+    layer.cornerRadius=5.0f;
 }
 
 
@@ -119,6 +119,9 @@
     //记录
     _state=state;
     
+    //控制是否可交互
+    self.userInteractionEnabled=(state==CoreFooterViewRefreshStateFailed);
+    
     switch (state) {
             
         case CoreFooterViewRefreshStateNormalForContinueDragUp://正常
@@ -158,11 +161,12 @@
 #pragma mark 刷新中
 -(void)stateRefreshing{
     [self configINterfaceWithShowAIView:YES constant:-10.0f text:@"正在载入数据"];
+    [self beginRefreshing];
 }
 
 #pragma mark 刷新失败
 -(void)stateFailed{
-    [self configINterfaceWithShowAIView:NO constant:0 text:@"网络连接失败"];
+    [self configINterfaceWithShowAIView:NO constant:0 text:@"刷新失败，点击重试"];
 }
 
 #pragma mark 刷新成功->无更多数据:数据量小于pagesize的都进入这个状态
@@ -232,14 +236,7 @@
     CGFloat happenOffsetY = [self happenOffsetY];
     
     // 如果是向下滚动到看不见尾部控件，设置状态并直接返回
-    if (currentOffsetY <= happenOffsetY){
-        if(self.state==CoreFooterViewRefreshStateFailed && currentOffsetY + CoreRefreshFooterViewH <= happenOffsetY){
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                self.state=CoreFooterViewRefreshStateNormalForContinueDragUp;
-            });
-        }
-        return;
-    }
+    if (currentOffsetY <= happenOffsetY) return;
     
     //给一个机会让上面失败的状态转为普通状态
     if(self.state==CoreFooterViewRefreshStateFailed) return;
@@ -247,7 +244,7 @@
     if(!self.scrollView.isDragging){//用户没有正在拖拽scrollView
         if(self.scrollView.isDecelerating){//必须要求在减速
             if(self.state!=CoreFooterViewRefreshStateRefreshing){//此时没有正在刷新
-                [self beginRefreshing];
+                self.state=CoreFooterViewRefreshStateRefreshing;
             }
         }
     }
@@ -289,15 +286,12 @@
     //界面立即显示
     self.state=CoreFooterViewRefreshStateRefreshing;
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         // 回调
         if ([self.beginRefreshingTaget respondsToSelector:self.beginRefreshingAction]) {
             msgSend(msgTarget(self.beginRefreshingTaget), self.beginRefreshingAction, self);
         }
     });
-    
-    
-    
 }
 
 
@@ -310,6 +304,11 @@
 }
 
 
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    self.state=CoreFooterViewRefreshStateRefreshing;
+    
+}
 
 
 @end
