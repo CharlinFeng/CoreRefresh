@@ -12,7 +12,7 @@
 >4.删除了所有复杂的调用，本框架一键安装，支持自动刷新，你只需在业务中给控件对应的state即可，其他全部由控件完成！<br />
 >5.本框架支持ios6及以上，横竖屏，支持TableView及CollectionView。<br />
 >6.高性能、易使用、人性化。<br />
->7.本框架是大型框架[CoreList](https://github.com/nsdictionary/CoreList)的核心组成部分之一！<br />
+>7.本框架是大型框架[CoreList](https://github.com/nsdictionary/CoreList "一个个人花费很多心血的框架！")的核心组成部分之一！<br />
 
 
 
