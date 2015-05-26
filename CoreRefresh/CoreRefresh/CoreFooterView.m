@@ -89,8 +89,12 @@
     //原本的bottom值
     CGFloat bottom=self.scrollViewOriginalInset.bottom;
     
-    self.scrollView.mj_contentInsetBottom=bottom+CoreRefreshFooterViewH;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.scrollView.mj_contentInsetBottom=bottom+CoreRefreshFooterViewH;
+    });
 }
+
+
 
 
 #pragma mark 重写调整frame

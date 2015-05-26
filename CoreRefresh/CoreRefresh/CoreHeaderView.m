@@ -396,6 +396,7 @@ CGFloat const deltaValue=40.0f;
             } else {
                 self.scrollView.mj_contentInsetTop = self.scrollViewOriginalInset.top;
             }
+            
         } completion:^(BOOL finished) {
             
             self.state=CoreHeaderViewRefreshStateNorMal;

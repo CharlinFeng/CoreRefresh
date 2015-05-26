@@ -11,6 +11,12 @@
 #import "UIView+MJExtension.h"
 #import "UIScrollView+MJExtension.h"
 
+@interface CoreRefreshView ()
+
+@property (nonatomic,assign) BOOL isCalInset;
+
+@end
+
 @implementation CoreRefreshView
 
 
@@ -45,6 +51,18 @@
     UIScrollView *scrollView = (UIScrollView *)self.superview;
     // 记录UIScrollView最开始的contentInset
     _scrollViewOriginalInset = scrollView.contentInset;
+}
+
+
+-(void)layoutSubviews{
+    
+    [super layoutSubviews];
+    
+    if(UIEdgeInsetsEqualToEdgeInsets(_scrollViewOriginalInset, UIEdgeInsetsZero) && !_isCalInset){
+        _scrollViewOriginalInset = self.scrollView.contentInset;
+        _isCalInset = YES;
+    }
+    
 }
 
 
