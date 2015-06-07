@@ -263,7 +263,7 @@ CGFloat const deltaValue=40.0f;
 -(void)stateRefreshing{
 
     // 执行动画
-    [UIView animateWithDuration:.3f animations:^{
+    [UIView animateWithDuration:.5f animations:^{
         
         //动画曲线
         [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
@@ -349,7 +349,7 @@ CGFloat const deltaValue=40.0f;
 {
     if (self.state == CoreHeaderViewRefreshStateRefreshing) {
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             // 回调
             if ([self.beginRefreshingTaget respondsToSelector:self.beginRefreshingAction]) {
                 msgSend(msgTarget(self.beginRefreshingTaget), self.beginRefreshingAction, self);
@@ -380,7 +380,7 @@ CGFloat const deltaValue=40.0f;
     //通知showView刷新结束
     self.showView.refreshing=NO;
     self.showView.progress=1.0f;
-    CGFloat timeInterVal=now?.01:2.0f;
+    CGFloat timeInterVal=now?.01:1.f;
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(timeInterVal * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         //执行动画

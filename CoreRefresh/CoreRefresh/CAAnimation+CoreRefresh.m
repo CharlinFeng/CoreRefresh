@@ -26,7 +26,7 @@
     anim.toValue=@(kDegreeToRadian(-360));
     
     //动画时长
-    anim.duration=1.f;
+    anim.duration=.5f;
     
     //是否反转
     anim.autoreverses=NO;

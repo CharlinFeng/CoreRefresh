@@ -132,6 +132,10 @@
             [self stateNormalForContinueDragUp];
             break;
             
+        case CoreFooterViewRefreshStateRequesting://请求中
+            [self stateRequesting];
+            break;
+            
         case CoreFooterViewRefreshStateRefreshing://刷新中
             [self stateRefreshing];
             break;
@@ -160,6 +164,11 @@
 #pragma mark 这就是最普通的状态，并且普通状态是请继续拉动
 -(void)stateNormalForContinueDragUp{
     [self configINterfaceWithShowAIView:NO constant:0.0f text:@"请继续向上滑动"];
+}
+
+#pragma mark 请求中
+-(void)stateRequesting{
+    [self configINterfaceWithShowAIView:YES constant:-10.0f text:@"正在载入数据"];
 }
 
 #pragma mark 刷新中
@@ -290,7 +299,7 @@
     //界面立即显示
     self.state=CoreFooterViewRefreshStateRefreshing;
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.2f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         // 回调
         if ([self.beginRefreshingTaget respondsToSelector:self.beginRefreshingAction]) {
             msgSend(msgTarget(self.beginRefreshingTaget), self.beginRefreshingAction, self);

@@ -11,15 +11,23 @@
 
 typedef enum{
     
-    CoreFooterViewRefreshStateNormalForContinueDragUp=0,                                                    //这就是最普通的状态，并且普通状态是请继续拉动
+    //这就是最普通的状态，并且普通状态是请继续拉动
+    CoreFooterViewRefreshStateNormalForContinueDragUp=0,
     
-    CoreFooterViewRefreshStateRefreshing,                                                                   //刷新中
+    //请求中
+    CoreFooterViewRefreshStateRequesting,
     
-    CoreFooterViewRefreshStateFailed,                                                                       //刷新失败
-    
-    CoreFooterViewRefreshStateSuccessedResultNoMoreData,                                                    //刷新成功->无更多数据
-    
-    CoreFooterViewRefreshStateSuccessedResultDataShowing,                                                   //刷新成功->本次的新数据正在展示中（此状态会延时变更为0）
+    //刷新中
+    CoreFooterViewRefreshStateRefreshing,
+
+    //刷新失败
+    CoreFooterViewRefreshStateFailed,
+
+    //刷新成功->无更多数据
+    CoreFooterViewRefreshStateSuccessedResultNoMoreData,
+
+    //刷新成功->本次的新数据正在展示中（此状态会延时变更为0）
+    CoreFooterViewRefreshStateSuccessedResultDataShowing,
     
 }CoreFooterViewRefreshState;
 

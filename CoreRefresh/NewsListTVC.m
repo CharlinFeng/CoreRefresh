@@ -99,7 +99,7 @@
     NSMutableArray *oldArrayM=[NSMutableArray arrayWithArray:self.dataList];
     NSInteger count=oldArrayM.count;
     
-    if(count!=100){
+    if(count<=66){
         for (NSInteger i=count; i<count+20; i++) {
             NSString *str=[NSString stringWithFormat:@"上拉刷新的新数据：%i",i];
             [oldArrayM addObject:str];
@@ -110,7 +110,7 @@
         [self.tableView reloadData];
         [self.tableView footerSetState:CoreFooterViewRefreshStateSuccessedResultDataShowing];
     }else{
-        [self.tableView footerSetState:CoreFooterViewRefreshStateFailed];
+        [self.tableView footerSetState:CoreFooterViewRefreshStateSuccessedResultNoMoreData];
     }
 
 }
