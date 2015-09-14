@@ -39,7 +39,7 @@
     [super awakeFromNib];
     
     //添加阴影
-    [self shadowAdd];
+//    [self shadowAdd];
     
     self.messageLabel.text=@"正在载入数据";
 }
