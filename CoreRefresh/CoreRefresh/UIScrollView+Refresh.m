@@ -12,9 +12,7 @@
 
 @interface UIScrollView ()
 
-@property (weak, nonatomic) CoreHeaderView *header;
 
-@property (weak, nonatomic) CoreFooterView *footer;
 
 @end
 
