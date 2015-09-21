@@ -14,7 +14,7 @@ NSString *const CoreRefreshContentOffset = @"contentOffset";
 
 NSString *const CoreRefreshContentSize = @"contentSize";
 
-CGFloat const CoreRefreshHeaderViewH=80.0f;
+CGFloat const CoreRefreshHeaderViewH=60.0f;
 
 CGFloat const CoreRefreshFooterViewH=40;
 

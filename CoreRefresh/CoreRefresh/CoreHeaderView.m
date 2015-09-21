@@ -263,7 +263,7 @@ CGFloat const deltaValue=40.0f;
 -(void)stateRefreshing{
 
     // 执行动画
-    [UIView animateWithDuration:.5f animations:^{
+    [UIView animateWithDuration:.25f animations:^{
         
         //动画曲线
         [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
@@ -373,21 +373,21 @@ CGFloat const deltaValue=40.0f;
     
 }
 
-
-
 - (void)endRefreshing:(BOOL)now{
 
     //通知showView刷新结束
     self.showView.refreshing=NO;
+    
     self.showView.progress=1.0f;
+    
     CGFloat timeInterVal=now?.01:1.f;
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(timeInterVal * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         //执行动画
-        [UIView animateWithDuration:.25f animations:^{
+        [UIView animateWithDuration:.2f animations:^{
             
             //动画曲线
-            [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+            [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
             
             if (self.scrollViewOriginalInset.top == 0) {
                 self.scrollView.mj_contentInsetTop = 0;
