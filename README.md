@@ -35,6 +35,8 @@ CoreRefresh（关注[信息公告牌](https://github.com/CharlinFeng/Show)）
 ![image](https://github.com/CharlinFeng/Resource/blob/master/CoreRefresh/3.gif)<br/>
 
 #### 注：请在CoreHeaderView.xib中的adView自定义您的广告内容，因为广告可能是文字，也可能是图片，还可能是其他复杂内容，所以预留Xib给您自定义。
+#### adView会在scrollView的ContentOffset改变中实时隐藏和显示，请一定要加在adView里面，不然可能会穿透导航栏显得不好看。
+
 <br/><br/>
 
 #### 4. 全自动的底部刷新，再也不需要手动拖拽！
