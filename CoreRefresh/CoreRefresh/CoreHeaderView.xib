@@ -47,29 +47,42 @@
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时点软件，高品质APP开发！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpW-yd-tRx">
-                    <rect key="frame" x="0.0" y="15" width="320" height="17"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFk-aP-DCU" userLabel="adView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时点软件，高品质APP开发！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1V-KJ-Vwd">
+                            <rect key="frame" x="0.0" y="15" width="320" height="18"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <animations/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" red="0.78823529410000004" green="0.78823529410000004" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="S1V-KJ-Vwd" firstAttribute="leading" secondItem="bFk-aP-DCU" secondAttribute="leading" id="dga-w6-VGk"/>
+                        <constraint firstItem="S1V-KJ-Vwd" firstAttribute="top" secondItem="bFk-aP-DCU" secondAttribute="top" constant="15" id="r19-Bd-N8q"/>
+                        <constraint firstAttribute="trailing" secondItem="S1V-KJ-Vwd" secondAttribute="trailing" id="tQk-4N-6oI"/>
+                    </constraints>
+                </view>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="bFk-aP-DCU" firstAttribute="top" secondItem="qQe-pk-zH2" secondAttribute="top" id="0Vu-il-7O3"/>
+                <constraint firstAttribute="trailing" secondItem="bFk-aP-DCU" secondAttribute="trailing" id="2a3-hC-nC5"/>
+                <constraint firstItem="bFk-aP-DCU" firstAttribute="leading" secondItem="qQe-pk-zH2" secondAttribute="leading" id="3gy-Cv-EPQ"/>
                 <constraint firstItem="gb3-2e-cUQ" firstAttribute="leading" secondItem="qQe-pk-zH2" secondAttribute="leading" constant="100" id="4e2-Yq-MuS"/>
+                <constraint firstItem="gb3-2e-cUQ" firstAttribute="top" secondItem="bFk-aP-DCU" secondAttribute="bottom" id="J8w-B8-98Y"/>
                 <constraint firstItem="59d-gQ-DlJ" firstAttribute="bottom" secondItem="gb3-2e-cUQ" secondAttribute="bottom" id="TVa-oK-geY"/>
-                <constraint firstAttribute="trailing" secondItem="XpW-yd-tRx" secondAttribute="trailing" id="Tox-y0-UuO"/>
                 <constraint firstItem="59d-gQ-DlJ" firstAttribute="leading" secondItem="gb3-2e-cUQ" secondAttribute="trailing" constant="15" id="VXR-JE-ieN"/>
                 <constraint firstItem="59d-gQ-DlJ" firstAttribute="leading" secondItem="gb3-2e-cUQ" secondAttribute="trailing" constant="15" id="WhS-be-IPb"/>
                 <constraint firstAttribute="bottom" secondItem="gb3-2e-cUQ" secondAttribute="bottom" constant="25" id="WiL-EM-0Ie"/>
-                <constraint firstItem="XpW-yd-tRx" firstAttribute="top" secondItem="qQe-pk-zH2" secondAttribute="top" constant="15" id="X5O-hj-aF5"/>
                 <constraint firstAttribute="centerY" secondItem="gb3-2e-cUQ" secondAttribute="centerY" id="Z74-Fl-q30"/>
                 <constraint firstItem="59d-gQ-DlJ" firstAttribute="leading" secondItem="gb3-2e-cUQ" secondAttribute="trailing" constant="20" id="cCO-fd-i1l"/>
                 <constraint firstAttribute="centerY" secondItem="59d-gQ-DlJ" secondAttribute="centerY" id="rs7-gv-T5j"/>
                 <constraint firstAttribute="centerX" secondItem="59d-gQ-DlJ" secondAttribute="centerX" constant="-20" id="ryf-0T-JsE"/>
-                <constraint firstItem="XpW-yd-tRx" firstAttribute="leading" secondItem="qQe-pk-zH2" secondAttribute="leading" id="t49-Gj-G2x"/>
                 <constraint firstAttribute="centerX" secondItem="gb3-2e-cUQ" secondAttribute="centerX" constant="60" id="uKe-hc-0dC"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -84,6 +97,7 @@
                 </mask>
             </variation>
             <connections>
+                <outlet property="adView" destination="bFk-aP-DCU" id="MQv-Vp-hd8"/>
                 <outlet property="iconImageV" destination="WZO-Mq-25n" id="NwK-GB-or6"/>
                 <outlet property="iconImageVMarginConstraint" destination="1gZ-JN-k7Z" id="Dhh-Uy-e83"/>
                 <outlet property="messageLabel" destination="59d-gQ-DlJ" id="bXc-xO-76Y"/>

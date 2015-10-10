@@ -40,6 +40,9 @@ CGFloat const deltaValue=40.0f;
  */
 @property (nonatomic,assign) CGSize scrollViewContentSize;
 
+@property (weak, nonatomic) IBOutlet UIView *adView;
+
+
 @end
 
 
@@ -107,6 +110,7 @@ CGFloat const deltaValue=40.0f;
         
         // 调整状态
         [self adjustStateWithContentOffset];
+        
     }else if([CoreRefreshContentSize isEqualToString:keyPath]){
         
         self.scrollViewContentSize=self.scrollView.contentSize;
@@ -138,10 +142,13 @@ CGFloat const deltaValue=40.0f;
     // 当前的contentOffset
     CGFloat offsetY=self.scrollView.mj_contentOffsetY+self.scrollView.contentInset.top;
 
+    self.adView.hidden = offsetY >= -CoreRefreshHeaderViewH;
+    
     //向上滚动直接返回
     if(offsetY>0) return;
     
     CGFloat currentOffsetY = ABS(offsetY);
+    
     // 头部控件刚好出现的offsetY
     CGFloat happenOffsetY = CoreRefreshHeaderViewH;
 
@@ -154,6 +161,7 @@ CGFloat const deltaValue=40.0f;
             
             // 转为即将刷新状态
             self.state = CoreHeaderViewRefreshStateReleaseForRefreshing;
+            
         } else if (self.state == CoreHeaderViewRefreshStateReleaseForRefreshing && currentOffsetY < happenOffsetY) {
             
             // 转为普通状态
@@ -169,6 +177,8 @@ CGFloat const deltaValue=40.0f;
 
 #pragma mark  进度条处理
 -(void)progressSetWithCurrentOffsetY:(CGFloat)currentOffsetY happenOffsetY:(CGFloat)happenOffsetY{
+    
+    
     if(currentOffsetY<=happenOffsetY){
         CGFloat deltaY=deltaValue;
         CGFloat nowY=currentOffsetY-deltaY;
@@ -184,7 +194,9 @@ CGFloat const deltaValue=40.0f;
         
         
         self.showView.progress=progress;
+
     }else{
+        
         self.showView.progress=1.0f;
     }
 
