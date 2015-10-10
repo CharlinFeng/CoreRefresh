@@ -3,8 +3,8 @@
 CoreRefresh（关注[信息公告牌](https://github.com/CharlinFeng/Show)）
 =======
 核心上拉下拉刷新控件，专业、高性能、个性化，与众不同！创意灵感来自iPad版本的土豆和淘宝！
-#### Xcode 6.0
-#### Objective-C
+#### .Xcode 6.0
+#### .Objective-C
 
 <br /><br /><br />
 
