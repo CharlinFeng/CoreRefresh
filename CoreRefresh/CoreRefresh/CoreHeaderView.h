@@ -10,17 +10,23 @@
 
 typedef enum{
     
-    CoreHeaderViewRefreshStateNorMal=0,                                                 //普通状态
+    //普通状态
+    CoreHeaderViewRefreshStateNorMal=0,
     
-    CoreHeaderViewRefreshStateReleaseForRefreshing,                                     //松手立即刷新
+    //松手立即刷新
+    CoreHeaderViewRefreshStateReleaseForRefreshing,
     
-    CoreHeaderViewRefreshStateRefreshing,                                               //刷新中
+    //刷新中
+    CoreHeaderViewRefreshStateRefreshing,
     
-    CoreHeaderViewRefreshStateRefreshingFailed,                                         //刷新失败
+    //刷新失败
+    CoreHeaderViewRefreshStateRefreshingFailed,
     
-    CoreHeaderViewRefreshStateSuccessedResultNoMoreData,                                //刷新成功，无更多数据
+    //刷新成功，无更多数据
+    CoreHeaderViewRefreshStateSuccessedResultNoMoreData,
     
-    CoreHeaderViewRefreshStateSuccessedResultDataShowing,                               //刷新成功，数据展示中
+    //刷新成功，数据展示中
+    CoreHeaderViewRefreshStateSuccessedResultDataShowing,
     
 }CoreHeaderViewRefreshState;
 
