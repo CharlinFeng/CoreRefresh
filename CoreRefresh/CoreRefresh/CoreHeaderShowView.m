@@ -7,7 +7,7 @@
 //
 
 #import "CoreHeaderShowView.h"
-#import "UIView+MJExtension.h"
+#import "UIView+Extension.h"
 #import "CAAnimation+CoreRefresh.h"
 
 #define kDegreeToRadian(x) (M_PI/180.0 * (x))
@@ -209,7 +209,7 @@
 -(CGFloat)centerX{
     
     if(!_centerX){
-        _centerX=self.mj_width *.5f;
+        _centerX=self.ex_width *.5f;
     }
     
     return _centerX;
@@ -219,7 +219,7 @@
     
     if(!_centerY){
         
-        _centerY=self.mj_height *.5f;
+        _centerY=self.ex_height *.5f;
     }
     
     return _centerY;

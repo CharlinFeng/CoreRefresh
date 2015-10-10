@@ -8,8 +8,8 @@
 
 #import "CoreRefreshView.h"
 #import "CoreRefreshConst.h"
-#import "UIView+MJExtension.h"
-#import "UIScrollView+MJExtension.h"
+#import "UIView+Extension.h"
+#import "UIScrollView+Extension.h"
 
 @interface CoreRefreshView ()
 

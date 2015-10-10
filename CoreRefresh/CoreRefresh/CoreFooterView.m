@@ -9,8 +9,8 @@
 
 
 #import "CoreFooterView.h"
-#import "UIScrollView+MJExtension.h"
-#import "UIView+MJExtension.h"
+#import "UIScrollView+Extension.h"
+#import "UIView+Extension.h"
 #import "CoreRefreshConst.h"
 #import <objc/message.h>
 
@@ -90,7 +90,7 @@
     CGFloat bottom=self.scrollViewOriginalInset.bottom;
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.scrollView.mj_contentInsetBottom=bottom+CoreRefreshFooterViewH;
+        self.scrollView.ex_contentInsetBottom=bottom+CoreRefreshFooterViewH;
     });
 }
 
@@ -103,13 +103,13 @@
     //原本的bottom值
     CGFloat bottom=self.scrollViewOriginalInset.bottom;
     // 内容的高度
-    CGFloat contentHeight = self.scrollView.mj_contentSizeHeight;
+    CGFloat contentHeight = self.scrollView.ex_contentSizeHeight;
     // 表格的高度
-    CGFloat scrollHeight = self.scrollView.mj_height - self.scrollViewOriginalInset.top - bottom;
+    CGFloat scrollHeight = self.scrollView.ex_height - self.scrollViewOriginalInset.top - bottom;
     // 设置位置和尺寸
     CGFloat y = MAX(contentHeight, scrollHeight)+bottom;
     CGFloat h=CoreRefreshFooterViewH;
-    CGFloat w=self.scrollView.mj_width;
+    CGFloat w=self.scrollView.ex_width;
     CGRect frame=CGRectMake(0, y, w, h);
     self.frame=frame;
 }
@@ -244,7 +244,7 @@
     if(self.state==CoreFooterViewRefreshStateSuccessedResultNoMoreData) return;
     
     // 当前的contentOffset
-    CGFloat currentOffsetY = self.scrollView.mj_contentOffsetY;
+    CGFloat currentOffsetY = self.scrollView.ex_contentOffsetY;
     // 尾部控件刚好出现的offsetY
     CGFloat happenOffsetY = [self happenOffsetY];
     
@@ -311,7 +311,7 @@
 #pragma mark  移除
 -(void)removeFooter{
     [UIView animateWithDuration:.25f animations:^{
-        self.scrollView.mj_contentInsetBottom=self.scrollViewOriginalInset.bottom;
+        self.scrollView.ex_contentInsetBottom=self.scrollViewOriginalInset.bottom;
     }];
     [self removeFromSuperview];
 }

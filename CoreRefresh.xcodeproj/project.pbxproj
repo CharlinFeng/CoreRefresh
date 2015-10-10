@@ -17,9 +17,9 @@
 		8955C1B11B2428CB00135D55 /* CoreRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8955C19F1B2428CB00135D55 /* CoreRefreshConst.m */; };
 		8955C1B21B2428CB00135D55 /* CoreRefreshResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8955C1A11B2428CB00135D55 /* CoreRefreshResource.bundle */; };
 		8955C1B31B2428CB00135D55 /* CoreRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8955C1A31B2428CB00135D55 /* CoreRefreshView.m */; };
-		8955C1B41B2428CB00135D55 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8955C1A51B2428CB00135D55 /* UIScrollView+MJExtension.m */; };
+		8955C1B41B2428CB00135D55 /* UIScrollView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8955C1A51B2428CB00135D55 /* UIScrollView+Extension.m */; };
 		8955C1B51B2428CB00135D55 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 8955C1A71B2428CB00135D55 /* UIScrollView+Refresh.m */; };
-		8955C1B61B2428CB00135D55 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8955C1A91B2428CB00135D55 /* UIView+MJExtension.m */; };
+		8955C1B61B2428CB00135D55 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8955C1A91B2428CB00135D55 /* UIView+Extension.m */; };
 		D605AC4E1A6B4F4C001825CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D605AC4D1A6B4F4C001825CE /* Foundation.framework */; };
 		D605AC501A6B4F4D001825CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D605AC4F1A6B4F4D001825CE /* CoreGraphics.framework */; };
 		D605AC521A6B4F4D001825CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D605AC511A6B4F4D001825CE /* UIKit.framework */; };
@@ -64,12 +64,12 @@
 		8955C1A11B2428CB00135D55 /* CoreRefreshResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CoreRefreshResource.bundle; sourceTree = "<group>"; };
 		8955C1A21B2428CB00135D55 /* CoreRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreRefreshView.h; sourceTree = "<group>"; };
 		8955C1A31B2428CB00135D55 /* CoreRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreRefreshView.m; sourceTree = "<group>"; };
-		8955C1A41B2428CB00135D55 /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
-		8955C1A51B2428CB00135D55 /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
+		8955C1A41B2428CB00135D55 /* UIScrollView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Extension.h"; sourceTree = "<group>"; };
+		8955C1A51B2428CB00135D55 /* UIScrollView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Extension.m"; sourceTree = "<group>"; };
 		8955C1A61B2428CB00135D55 /* UIScrollView+Refresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refresh.h"; sourceTree = "<group>"; };
 		8955C1A71B2428CB00135D55 /* UIScrollView+Refresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Refresh.m"; sourceTree = "<group>"; };
-		8955C1A81B2428CB00135D55 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
-		8955C1A91B2428CB00135D55 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		8955C1A81B2428CB00135D55 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		8955C1A91B2428CB00135D55 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		D605AC4A1A6B4F4C001825CE /* CoreRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D605AC4D1A6B4F4C001825CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D605AC4F1A6B4F4D001825CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -135,12 +135,12 @@
 				8955C1A11B2428CB00135D55 /* CoreRefreshResource.bundle */,
 				8955C1A21B2428CB00135D55 /* CoreRefreshView.h */,
 				8955C1A31B2428CB00135D55 /* CoreRefreshView.m */,
-				8955C1A41B2428CB00135D55 /* UIScrollView+MJExtension.h */,
-				8955C1A51B2428CB00135D55 /* UIScrollView+MJExtension.m */,
+				8955C1A41B2428CB00135D55 /* UIScrollView+Extension.h */,
+				8955C1A51B2428CB00135D55 /* UIScrollView+Extension.m */,
 				8955C1A61B2428CB00135D55 /* UIScrollView+Refresh.h */,
 				8955C1A71B2428CB00135D55 /* UIScrollView+Refresh.m */,
-				8955C1A81B2428CB00135D55 /* UIView+MJExtension.h */,
-				8955C1A91B2428CB00135D55 /* UIView+MJExtension.m */,
+				8955C1A81B2428CB00135D55 /* UIView+Extension.h */,
+				8955C1A91B2428CB00135D55 /* UIView+Extension.m */,
 			);
 			path = CoreRefresh;
 			sourceTree = "<group>";
@@ -327,10 +327,10 @@
 				8955C1AB1B2428CB00135D55 /* CoreFooterView.m in Sources */,
 				D605AC5A1A6B4F4D001825CE /* main.m in Sources */,
 				8955C1AD1B2428CB00135D55 /* CoreHeaderShowView.m in Sources */,
-				8955C1B41B2428CB00135D55 /* UIScrollView+MJExtension.m in Sources */,
+				8955C1B41B2428CB00135D55 /* UIScrollView+Extension.m in Sources */,
 				8955C1B31B2428CB00135D55 /* CoreRefreshView.m in Sources */,
 				8955C1B11B2428CB00135D55 /* CoreRefreshConst.m in Sources */,
-				8955C1B61B2428CB00135D55 /* UIView+MJExtension.m in Sources */,
+				8955C1B61B2428CB00135D55 /* UIView+Extension.m in Sources */,
 				8955C1B51B2428CB00135D55 /* UIScrollView+Refresh.m in Sources */,
 				D605AC841A6B4F74001825CE /* NewsListTVC.m in Sources */,
 				8955C1AA1B2428CB00135D55 /* CAAnimation+CoreRefresh.m in Sources */,

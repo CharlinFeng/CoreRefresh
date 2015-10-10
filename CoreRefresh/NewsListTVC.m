@@ -8,7 +8,7 @@
 
 #import "NewsListTVC.h"
 #import "CoreRefreshEntry.h"
-#import "UIScrollView+MJExtension.h"
+#import "UIScrollView+Extension.h"
 
 @interface NewsListTVC ()
 

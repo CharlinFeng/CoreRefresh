@@ -7,8 +7,8 @@
 //
 
 #import "CoreHeaderView.h"
-#import "UIScrollView+MJExtension.h"
-#import "UIView+MJExtension.h"
+#import "UIScrollView+Extension.h"
+#import "UIView+Extension.h"
 #import "CoreRefreshConst.h"
 #import "CoreHeaderShowView.h"
 #import "CAAnimation+CoreRefresh.h"
@@ -125,7 +125,7 @@ CGFloat const deltaValue=40.0f;
 
         CGFloat h=120;
         CGFloat y=-120;
-        CGFloat w=self.scrollView.mj_contentSizeWidth;
+        CGFloat w=self.scrollView.ex_contentSizeWidth;
         CGRect frame=CGRectMake(0,y,w,h);
         self.frame=frame;
     }
@@ -140,7 +140,7 @@ CGFloat const deltaValue=40.0f;
 {
     
     // 当前的contentOffset
-    CGFloat offsetY=self.scrollView.mj_contentOffsetY+self.scrollView.contentInset.top;
+    CGFloat offsetY=self.scrollView.ex_contentOffsetY+self.scrollView.contentInset.top;
 
     self.adView.hidden = offsetY >= -CoreRefreshHeaderViewH;
     
@@ -282,10 +282,10 @@ CGFloat const deltaValue=40.0f;
         
         // 1.增加滚动区域
         CGFloat top = self.scrollView.contentInset.top + CoreRefreshHeaderViewH;
-        self.scrollView.mj_contentInsetTop = top;
+        self.scrollView.ex_contentInsetTop = top;
         
         // 2.设置滚动位置
-        self.scrollView.mj_contentOffsetY = - top;
+        self.scrollView.ex_contentOffsetY = - top;
     } completion:^(BOOL finished) {
         //更新界面
         [self updateInterFaceForStatusWithMessage:@"正在刷新中"];
@@ -402,11 +402,11 @@ CGFloat const deltaValue=40.0f;
             [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
             
             if (self.scrollViewOriginalInset.top == 0) {
-                self.scrollView.mj_contentInsetTop = 0;
-            } else if (self.scrollViewOriginalInset.top == self.scrollView.mj_contentInsetTop) {
-                self.scrollView.mj_contentInsetTop -= self.mj_height;
+                self.scrollView.ex_contentInsetTop = 0;
+            } else if (self.scrollViewOriginalInset.top == self.scrollView.ex_contentInsetTop) {
+                self.scrollView.ex_contentInsetTop -= self.ex_height;
             } else {
-                self.scrollView.mj_contentInsetTop = self.scrollViewOriginalInset.top;
+                self.scrollView.ex_contentInsetTop = self.scrollViewOriginalInset.top;
             }
             
         } completion:^(BOOL finished) {
