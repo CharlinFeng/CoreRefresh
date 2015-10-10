@@ -3,7 +3,7 @@
 //  CoreListMVC
 //
 //  Created by muxi on 15/3/12.
-//  Copyright (c) 2015年 沐汐. All rights reserved.
+//  Copyright (c) 2015年 冯成林. All rights reserved.
 //
 
 #import "CAAnimation+CoreRefresh.h"

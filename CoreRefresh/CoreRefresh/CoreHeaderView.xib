@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view userInteractionEnabled="NO" contentMode="scaleToFill" id="qQe-pk-zH2" customClass="CoreHeaderView">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gb3-2e-cUQ" userLabel="showViewContentV">
-                    <rect key="frame" x="88" y="23" width="25" height="25"/>
+                    <rect key="frame" x="88" y="70" width="25" height="25"/>
                     <subviews>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfa-sy-rIr" userLabel="showView" customClass="CoreHeaderShowView">
                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                            <animations/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <imageView userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CoreRefreshResource.bundle/coreRefreshIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="WZO-Mq-25n" userLabel="iconImageV">
                             <rect key="frame" x="4" y="3" width="17" height="17"/>
+                            <animations/>
                         </imageView>
                     </subviews>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="WZO-Mq-25n" secondAttribute="bottom" constant="5" id="1gZ-JN-k7Z"/>
@@ -37,29 +40,43 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="继续向下拉" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59d-gQ-DlJ" userLabel="messageLabel">
-                    <rect key="frame" x="128" y="26" width="90" height="22"/>
+                    <rect key="frame" x="128" y="73" width="90" height="22"/>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时点软件，高品质APP开发！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpW-yd-tRx">
+                    <rect key="frame" x="0.0" y="15" width="320" height="17"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.78823529410000004" green="0.78823529410000004" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="gb3-2e-cUQ" firstAttribute="leading" secondItem="qQe-pk-zH2" secondAttribute="leading" constant="100" id="4e2-Yq-MuS"/>
                 <constraint firstItem="59d-gQ-DlJ" firstAttribute="bottom" secondItem="gb3-2e-cUQ" secondAttribute="bottom" id="TVa-oK-geY"/>
+                <constraint firstAttribute="trailing" secondItem="XpW-yd-tRx" secondAttribute="trailing" id="Tox-y0-UuO"/>
                 <constraint firstItem="59d-gQ-DlJ" firstAttribute="leading" secondItem="gb3-2e-cUQ" secondAttribute="trailing" constant="15" id="VXR-JE-ieN"/>
                 <constraint firstItem="59d-gQ-DlJ" firstAttribute="leading" secondItem="gb3-2e-cUQ" secondAttribute="trailing" constant="15" id="WhS-be-IPb"/>
+                <constraint firstAttribute="bottom" secondItem="gb3-2e-cUQ" secondAttribute="bottom" constant="25" id="WiL-EM-0Ie"/>
+                <constraint firstItem="XpW-yd-tRx" firstAttribute="top" secondItem="qQe-pk-zH2" secondAttribute="top" constant="15" id="X5O-hj-aF5"/>
                 <constraint firstAttribute="centerY" secondItem="gb3-2e-cUQ" secondAttribute="centerY" id="Z74-Fl-q30"/>
                 <constraint firstItem="59d-gQ-DlJ" firstAttribute="leading" secondItem="gb3-2e-cUQ" secondAttribute="trailing" constant="20" id="cCO-fd-i1l"/>
                 <constraint firstAttribute="centerY" secondItem="59d-gQ-DlJ" secondAttribute="centerY" id="rs7-gv-T5j"/>
                 <constraint firstAttribute="centerX" secondItem="59d-gQ-DlJ" secondAttribute="centerX" constant="-20" id="ryf-0T-JsE"/>
+                <constraint firstItem="XpW-yd-tRx" firstAttribute="leading" secondItem="qQe-pk-zH2" secondAttribute="leading" id="t49-Gj-G2x"/>
                 <constraint firstAttribute="centerX" secondItem="gb3-2e-cUQ" secondAttribute="centerX" constant="60" id="uKe-hc-0dC"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="4e2-Yq-MuS"/>
+                    <exclude reference="Z74-Fl-q30"/>
                     <exclude reference="VXR-JE-ieN"/>
                     <exclude reference="cCO-fd-i1l"/>
                     <exclude reference="rs7-gv-T5j"/>
@@ -73,7 +90,7 @@
                 <outlet property="showVWConstraint" destination="4Xh-go-4H2" id="roL-JV-okB"/>
                 <outlet property="showView" destination="sfa-sy-rIr" id="NzY-Cx-qCY"/>
             </connections>
-            <point key="canvasLocation" x="283" y="411"/>
+            <point key="canvasLocation" x="431" y="378"/>
         </view>
     </objects>
     <resources>

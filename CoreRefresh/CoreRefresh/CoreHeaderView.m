@@ -119,8 +119,8 @@ CGFloat const deltaValue=40.0f;
         //设置状态
         self.state=CoreHeaderViewRefreshStateNorMal;
 
-        CGFloat h=CoreRefreshHeaderViewH;
-        CGFloat y=-h;
+        CGFloat h=120;
+        CGFloat y=-120;
         CGFloat w=self.scrollView.mj_contentSizeWidth;
         CGRect frame=CGRectMake(0,y,w,h);
         self.frame=frame;

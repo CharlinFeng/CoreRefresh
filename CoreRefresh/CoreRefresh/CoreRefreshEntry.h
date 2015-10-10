@@ -2,8 +2,8 @@
 //  CoreRefreshEntry.h
 //  CoreRefresh
 //
-//  Created by 沐汐 on 15-1-18.
-//  Copyright (c) 2015年 沐汐. All rights reserved.
+//  Created by 冯成林 on 15-1-18.
+//  Copyright (c) 2015年 冯成林. All rights reserved.
 //  核心刷新库全局头文件
 //
 //  本框架基本MJRefresh
