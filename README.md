@@ -5,7 +5,7 @@
 
 #### 新增顶部广告功能
 
-请在CoreHeaderView.xib中的adView中添加您的广告内容。
+请在CoreHeaderView.xib中的adView中自定义您的广告内容。
 
 <br /><br /><br />
 
