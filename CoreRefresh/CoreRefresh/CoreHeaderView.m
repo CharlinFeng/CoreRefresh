@@ -120,12 +120,14 @@ CGFloat const deltaValue=40.0f;
 
 -(void)adjustFrameWithContentSize{
     if(self.superview){
+        
         //设置状态
         self.state=CoreHeaderViewRefreshStateNorMal;
 
         CGFloat h=120;
         CGFloat y=-120;
         CGFloat w=self.scrollView.ex_contentSizeWidth;
+        if(w<=0) w=self.scrollView.bounds.size.width;
         CGRect frame=CGRectMake(0,y,w,h);
         self.frame=frame;
     }
